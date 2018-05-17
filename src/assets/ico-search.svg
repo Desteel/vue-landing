@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72.063" viewBox="0 0 72 72.063">
+  <defs>
+    <style>
+      .cls-1 {
+      fill: #fff;
+      fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Shape_13.svg" data-name="Shape 13.svg" class="cls-1"
+        d="M1069.41,689.372l-2.11,2.108a5.415,5.415,0,0,1-7.66,0l-13.26-13.26a30.951,30.951,0,1,1,9.79-9.756l13.24,13.244A5.413,5.413,0,0,1,1069.41,689.372Zm-39.45-59.8a22.4,22.4,0,1,0,22.4,22.4A22.4,22.4,0,0,0,1029.96,629.569Z"
+        transform="translate(-999 -621)"/>
+</svg>

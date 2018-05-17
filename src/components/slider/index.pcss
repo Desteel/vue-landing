@@ -1,0 +1,48 @@
+.slider {
+  &__wrap {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__list {
+    flex-direction: column;
+  }
+
+  &__item {
+    top: 0;
+    position: absolute;
+    left: 0;
+    opacity: 1;
+    transition: all ease .5s;
+
+    &--current {
+      position: relative;
+    }
+
+    &--next {
+      left: 100%;
+      opacity: 0;
+    }
+
+    &--prev {
+      left: -100%;
+      opacity: 0;
+    }
+  }
+
+  &__nav {
+    &-btn {
+      top: 0;
+      position: absolute;
+      cursor: pointer;
+
+      &--prev {
+        left: 0;
+      }
+
+      &--next {
+        right: 0;
+      }
+    }
+  }
+}

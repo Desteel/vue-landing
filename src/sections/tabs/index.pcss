@@ -1,0 +1,256 @@
+.tab {
+  &__links {
+    display: flex;
+  }
+
+  &__link {
+    flex-basis: 33.333%;
+    padding: 1.75em 1.5em 1.75em;
+    z-index: 20;
+    transition: all ease .5s;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 15px;
+      background-color: #fff;
+      opacity: 0;
+      transition: all ease .5s;
+    }
+
+    &--active {
+      box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.17);
+
+      &:after {
+        opacity: 1;
+      }
+    }
+
+    &--hide {
+      box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0);
+    }
+  }
+
+  &__link-icon {
+    width: 135px;
+    height: 155px;
+    position: relative;
+  }
+
+  &__link-title {
+    font-size: 1.65em;
+    line-height: 1em;
+    padding: .55em .5em .7em;
+    color: #5c5b5b;
+    text-align: center;
+
+    &--small {
+      font-size: .85em;
+    }
+  }
+
+  &__sections {
+    overflow: hidden;
+
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.17);
+    position: relative;
+    z-index: 10;
+  }
+
+  &__section {
+    position: relative;
+    transform-origin: 50% 50%;
+    transition: all ease-out .7s;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background-color: #fff;
+      display: none;
+    }
+
+    &--active {
+      display: block;
+      opacity: 1;
+      z-index: 10;
+      animation: tab-show .6s ease-out;
+
+      &:before {
+        display: block;
+      }
+    }
+
+    &--hide {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      animation: tab-hide .7s cubic-bezier(0.76, 0.6, 0.51, 0.9);
+      z-index: 1;
+    }
+  }
+
+  &__content {
+    font-size: .9em;
+    padding: 3.9em;
+    line-height: 1.7em;
+    position: relative;
+    overflow: hidden;
+
+    p {
+      margin-top: 1.6em;
+      margin-bottom: 0;
+    }
+
+    p + p {
+      margin-top: 2.5em;
+    }
+  }
+}
+
+@keyframes tab-hide {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  40% {
+    transform: scale(1) translate(0, 80px);
+  }
+  100% {
+    transform: scale(0.9) translate(200px, 120px);
+  }
+}
+
+@keyframes tab-show {
+  0% {
+    transform: translate(0, 50px);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+.figure-hexagon {
+  &--cyan {
+    fill: #6598e6;
+  }
+
+  &--yellow {
+    fill: #fdcf0a;
+  }
+
+  &--green {
+    fill: #12b367;
+  }
+
+  &--orange {
+    fill: #e67624;
+  }
+}
+
+.ipad {
+  width: 713px;
+  height: 324px;
+  margin: 0.5em 0 2.2em 7em;
+
+  &__screen {
+    background: url("../../assets/screen1.png") center center no-repeat;
+    width: 548px;
+    height: 223px;
+    display: block;
+    position: absolute;
+    top: 57px;
+    left: 234px;
+    z-index: 10;
+    transition: top ease 0.5s, opacity ease-out 0.7s;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 28px;
+      right: 0;
+      background: url("../../assets/screen-light.png") center no-repeat;
+      width: 289px;
+      height: 191px;
+      transition: all ease 0.5s;
+    }
+  }
+
+  &__device {
+    background: url("../../assets/device1.png") center center no-repeat;
+    width: 713px;
+    height: 335px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 57px;
+      right: 34px;
+      background: url("../../assets/lights-device.png") center no-repeat;
+      width: 327px;
+      height: 228px;
+    }
+  }
+}
+
+.is-animate {
+  .ipad {
+    &__screen {
+      transform: translate(0px, 42px);
+      opacity: 0;
+    }
+
+    &__device {
+      transform: translate(0, 100px);
+      opacity: 0;
+    }
+
+    &--animated {
+      .ipad {
+        &__screen {
+          animation: ipad__screen 1.5s ease-out;
+          transform: translate(0, 0);
+          opacity: 1;
+        }
+
+        &__device {
+          animation: ipad__device 1s ease-in;
+          transform: translate(0, 0);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@keyframes ipad__screen {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 42px);
+  }
+  70% {
+    opacity: 0;
+    transform: translate(0px, 42px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes ipad__device {
+  0% {
+    opacity: 0;
+    transform: translate(0, 100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}

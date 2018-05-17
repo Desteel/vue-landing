@@ -1,0 +1,92 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2.2rem;
+  padding: 1.9em 0;
+
+  &__col {
+    display: flex;
+    flex-direction: row;
+
+    &--info {
+      flex-basis: 76%;
+    }
+
+    &--logo {
+      flex-basis: 24%;
+      flex-direction: column;
+    }
+
+    &--nav {
+      flex-basis: 55%;
+      padding-left: 2.6em;
+    }
+
+    &--news {
+      flex-basis: 45%;
+      padding-right: 1.4em;
+    }
+
+    &--menu-1 {
+      flex-basis: 50%;
+    }
+
+    &--menu-2 {
+      flex-basis: 50%;
+    }
+
+  }
+
+  &__logo {
+    &-link {
+      font-size: 7.3em;
+      line-height: 1em;
+      color: #fff;
+      text-decoration: none;
+      opacity: .3;
+    }
+  }
+
+  &__copyright {
+    a {
+      font-size: .8em;
+      line-height: 1em;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    &--parent {
+
+    }
+
+    &--child {
+      margin: .3em 0;
+    }
+  }
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
+
+    &--parent {
+      font-size: 1.375em;
+    }
+
+    &--child {
+      font-size: .9em;
+      opacity: .5;
+    }
+  }
+
+  &--child {
+    margin: 0;
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "vue-landing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Shimba Bumba <sh.bumba@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "server": "webpack-dev-server --mode development",
+    "watch": "webpack --config webpack.config.js --watch --mode development",
+    "build:dev": "webpack --config webpack.config.js --mode development",
+    "build:prod": "webpack --config webpack.config.js --mode production",
+    "build": "webpack --config webpack.config.js --mode production"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.10",
+    "cssnano": "^3.10.0",
+    "extract-loader": "^1.0.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.0.6",
+    "postcss": "^6.0.19",
+    "postcss-assets": "^5.0.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^11.1.0",
+    "postcss-loader": "^2.1.1",
+    "postcss-math": "^0.0.10",
+    "postcss-short": "^4.1.0",
+    "precss": "^3.1.2",
+    "style-loader": "^0.20.3",
+    "uglifyjs-webpack-plugin": "^1.2.3",
+    "vue-loader": "^14.2.1",
+    "vue-template-compiler": "^2.5.15",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "normalize.css": "^8.0.0",
+    "postcss-jsmath": "^0.0.81",
+    "vue": "^2.5.15"
+  }
+}

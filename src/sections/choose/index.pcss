@@ -1,0 +1,93 @@
+.choose {
+  display: flex;
+
+  &__image {
+    flex-basis: 50%;
+
+    img {
+      margin-left: -1.2em;
+      margin-top: -.5em;
+    }
+  }
+
+  &__text {
+    flex-basis: 50%;
+    padding-top: .4rem;
+  }
+}
+
+.check-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.75em 0;
+
+  &__item {
+    position: relative;
+    font-size: .87em;
+    padding-top: 0;
+    padding-left: 2.15em;
+    margin: 1.6em 0;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url("../../assets/check.png") center center no-repeat;
+      background-size: cover;
+      width: 1.125rem;
+      height: 1.125rem;
+    }
+  }
+}
+
+.is-animate {
+  .choose {
+    &__image {
+      transform: translate(-100px, 0);
+      opacity: 0;
+      transition: all 1s ease-in;
+    }
+
+    &__text {
+      transform: translate(50px, 0);
+      opacity: 0;
+      transition: all 1s ease-in;
+    }
+
+    .check-list {
+      &__item {
+        transform: translate(50px, 0);
+        opacity: 0;
+        transition: all .7s ease-in;
+      }
+
+      @for $i from 1 to 10 {
+        &__item:nth-child($i) {
+          transition-delay: math($(i)/8) s;
+        }
+      }
+    }
+
+    &--animated {
+      .choose {
+        &__image {
+          transform: translate(0, 0);
+          opacity: 1;
+        }
+
+        &__text {
+          transform: translate(0, 0);
+          opacity: 1;
+        }
+      }
+
+      .check-list {
+        &__item {
+          opacity: 1;
+          transform: translate(0, 0);
+        }
+      }
+    }
+  }
+}
